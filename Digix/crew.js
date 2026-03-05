@@ -72,7 +72,7 @@ async function connectToWhatsapp(handleMessage) {
 
                 const messageText = `
 ╔══════════════════╗
-      *DigiX Crew Bot Connected Successfully* 🚀
+      *SOCIETY-MD Bot Connected Successfully* 🚀
 ╠══════════════════╣
 > "Always Forward. Digital Crew, one of the best."
 ╚══════════════════╝
