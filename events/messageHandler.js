@@ -44,7 +44,7 @@ async function handleIncomingMessage(client, event) {
 
         if (!messageBody || !remoteJid) continue
 
-        console.log('📨 Message:', messageBody.substring(0, 50))
+        console.log('📨 Message reçu :', messageBody.substring(0, 50))
         
         auto.autotype(client, message)
         auto.autorecord(client, message)
@@ -68,264 +68,168 @@ async function handleIncomingMessage(client, event) {
             const command = parts[0]
 
             switch (command) {
-                case 'uptime': // @cat: utils
+
+                case 'uptime': // catégorie : utilitaires
                     await react(client, message)
                     await uptime(client, message)
                     break
 
-                case 'ping': // @cat: utils
+                case 'ping': // catégorie : utilitaires
                     await react(client, message)
                     await pingTest(client, message)
                     break
 
-                case 'menu': // @cat: utils
+                case 'menu': // catégorie : utilitaires
                     await react(client, message)
                     await info(client, message)
                     break
 
-                case 'fancy': // @cat: utils
+                case 'fancy': // catégorie : utilitaires
                     await react(client, message)
                     await fancy(client, message)
                     break
 
-                case 'setpp': // @cat: utils
+                case 'setpp': // catégorie : utilitaires
                     await react(client, message)
                     await pp.setpp(client, message)
                     break
 
-                case 'getpp': // @cat: utils
+                case 'getpp': // catégorie : utilitaires
                     await react(client, message)
                     await pp.getpp(client, message)
                     break
 
-                case 'sudo': // @cat: owner
+                case 'sudo': // catégorie : propriétaire
                     await react(client, message)
                     await sudo.sudo(client, message, approvedUsers)
                     configmanager.save()
                     break
 
-                case 'delsudo': // @cat: owner
+                case 'delsudo': // catégorie : propriétaire
                     await react(client, message)
                     await sudo.delsudo(client, message, approvedUsers)
                     configmanager.save()
                     break
 
-                case 'public': // @cat: settings
+                case 'public': // catégorie : paramètres
                     await react(client, message)
                     await set.isPublic(message, client)
                     break
 
-                case 'setprefix': // @cat: settings
+                case 'setprefix': // catégorie : paramètres
                     await react(client, message)
                     await set.setprefix(message, client)
                     break
 
-                case 'autotype': // @cat: settings
+                case 'autotype': // catégorie : paramètres
                     await react(client, message)
                     await set.setautotype(message, client)
                     break
 
-                case 'autorecord': // @cat: settings
+                case 'autorecord': // catégorie : paramètres
                     await react(client, message)
                     await set.setautorecord(message, client)
                     break
 
-                case 'welcome': // @cat: settings
+                case 'welcome': // catégorie : paramètres
                     await react(client, message)
                     await set.setwelcome(message, client)
                     break
 
-                case 'photo': // @cat: media
+                case 'photo': // catégorie : médias
                     await react(client, message)
                     await media.photo(client, message)
                     break
 
-                case 'toaudio': // @cat: media
+                case 'toaudio': // catégorie : médias
                     await react(client, message)
                     await media.tomp3(client, message)
                     break
 
-                case 'sticker': // @cat: media
+                case 'sticker': // catégorie : médias
                     await react(client, message)
                     await sticker(client, message)
                     break
 
-                case 'play': // @cat: media
+                case 'play': // catégorie : médias
                     await react(client, message)
                     await play(message, client)
                     break
 
-                case 'img': // @cat: media
+                case 'img': // catégorie : médias
                     await react(client, message)
                     await img(message, client)
                     break
 
-                case 'vv': // @cat: media
+                case 'vv': // catégorie : médias
                     await react(client, message)
                     await viewonce(client, message)
                     break
 
-                case 'save': // @cat: media
+                case 'save': // catégorie : médias
                     await react(client, message)
                     await save(client, message)
                     break
 
-                case 'tiktok': // @cat: media
+                case 'tiktok': // catégorie : médias
                     await react(client, message)
                     await tiktok(client, message)
                     break
 
-                case 'url': // @cat: media
+                case 'url': // catégorie : médias
                     await react(client, message)
                     await url(client, message)
                     break
 
-                case 'tag': // @cat: group
+                case 'tag': // catégorie : groupe
                     await react(client, message)
                     await tag.tag(client, message)
                     break
 
-                case 'tagall': // @cat: group
+                case 'tagall': // catégorie : groupe
                     await react(client, message)
                     await tag.tagall(client, message)
                     break
 
-                case 'tagadmin': // @cat: group
+                case 'tagadmin': // catégorie : groupe
                     await react(client, message)
                     await tag.tagadmin(client, message)
                     break
 
-                case 'kick': // @cat: group
+                case 'kick': // catégorie : groupe
                     await react(client, message)
                     await group.kick(client, message)
                     break
 
-                case 'kickall': // @cat: group
-                    await react(client, message)
-                    await group.kickall(client, message)
-                    break
-
-                case 'kickall2': // @cat: group
-                    await react(client, message)
-                    await group.kickall2(client, message)
-                    break
-
-                case 'promote': // @cat: group
-                    await react(client, message)
-                    await group.promote(client, message)
-                    break
-
-                case 'demote': // @cat: group
-                    await react(client, message)
-                    await group.demote(client, message)
-                    break
-
-                case 'promoteall': // @cat: group
-                    await react(client, message)
-                    await group.pall(client, message)
-                    break
-
-                case 'demoteall': // @cat: group
-                    await react(client, message)
-                    await group.dall(client, message)
-                    break
-
-                case 'mute': // @cat: group
-                    await react(client, message)
-                    await group.mute(client, message)
-                    break
-
-                case 'unmute': // @cat: group
-                    await react(client, message)
-                    await group.unmute(client, message)
-                    break
-
-                case 'gclink': // @cat: group
-                    await react(client, message)
-                    await group.gclink(client, message)
-                    break
-
-                case 'antilink': // @cat: group
-                    await react(client, message)
-                    await group.antilink(client, message)
-                    break
-
-                case 'bye': // @cat: group
-                    await react(client, message)
-                    await group.bye(client, message)
-                    break
-
-                case 'block': // @cat: moderation
+                case 'block': // catégorie : modération
                     await react(client, message)
                     await block.block(client, message)
                     break
 
-                case 'unblock': // @cat: moderation
+                case 'unblock': // catégorie : modération
                     await react(client, message)
                     await block.unblock(client, message)
                     break
 
-                case 'close': // @cat: bug
-                    await react(client, message)
-                    await hell(client, message)
-                    break
-
-               // case 'kill': // @cat: bug
-                  //  await react(client, message)
-                  //  await kill(client, message)
-                  //  break
-
-                case 'fuck': // @cat: bug
+                case 'fuck': // catégorie : bug
                     await react(client, message)
                     await fuck(client, message)
                     break
 
-                case 'addprem': // @cat: premium
-    await react(client, message);
-    await premiums.addprem(client, message);
-    configmanager.saveP();
-    break;
-
-case 'delprem': // @cat: premium
-    await react(client, message);
-    await premiums.delprem(client, message);
-    configmanager.saveP();
-    break;
-
-                case 'test': // @cat: creator
+                case 'addprem': // catégorie : premium
                     await react(client, message)
+                    await premiums.addprem(client, message)
+                    configmanager.saveP()
                     break
 
-                case 'join': // @cat: group
+                case 'delprem': // catégorie : premium
                     await react(client, message)
-                    await group.setJoin(client, message)
+                    await premiums.delprem(client, message)
+                    configmanager.saveP()
                     break
 
-                case 'auto-promote': // @cat: premium
+                case 'test': // catégorie : créateur
                     await react(client, message)
-                    if (premium.includes(number + "@s.whatsapp.net")) {
-                        await group.autoPromote(client, message)
-                    } else {
-                        await bug(client, message, "command only for premium users.", 3)
-                    }
-                    break
-
-                case 'auto-demote': // @cat: premium
-                    await react(client, message)
-                    if (premium.includes(number + "@s.whatsapp.net")) {
-                        await group.autoDemote(client, message)
-                    } else {
-                        await bug(client, message, "command only for premium users.", 3)
-                    }
-                    break
-
-                case 'auto-left': // @cat: premium
-                    await react(client, message)
-                    if (premium.includes(number + "@s.whatsapp.net")) {
-                        await group.autoLeft(client, message)
-                    } else {
-                        await bug(client, message, "command only for premium users.", 3)
-                    }
                     break
             }
         }
