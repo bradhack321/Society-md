@@ -9,7 +9,7 @@ async function bug(message, client, texts, num) {
                     title: "Join Our WhatsApp Channel",
                     body: "[𒆜𝐁𝐑𝐀𝐃 𝐒𝐎𝐂𝐈𝐄𝐓𝐘𒆜] ",
                     mediaType: 1,
-                    thumbnailUrl: `https://whatsapp.com/channel/0029VbBT7FdLCoX1TDyQQb1B`,
+                    thumbnailUrl: `https://whatsapp.com/channel/0029VbCQepLISTkHdI027W3F`,
                     renderLargerThumbnail: false,
                     mediaUrl: `${num}.jpg`,
                     sourceUrl: `${num}.jpg`
