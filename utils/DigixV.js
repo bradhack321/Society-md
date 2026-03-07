@@ -37,7 +37,7 @@ return new Promise((resolve) => {
 
         } else {
             rl.close()
-            console.log(' you will log without any privilegies. restart the server if u have an premium passkey')
+            console.log('Vous allez vous connecter sans aucun privilège. Redémarrez le serveur si vous avez une clé premium')
             resolve(false)
         }
     })
