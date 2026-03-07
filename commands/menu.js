@@ -122,7 +122,7 @@ menu += `┗━━━━━━━━━━━━━━━
           contextInfo: {
             participant: "0@s.whatsapp.net",
             remoteJid: "status@broadcast",
-            quotedMessage: { conversation: " Digix Crew" },
+            quotedMessage: { conversation: " [𒆜𝐁𝐑𝐀𝐃 𝐒𝐎𝐂𝐈𝐄𝐓𝐘𒆜]" },
             isForwarded: true
           }
         });
