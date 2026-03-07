@@ -74,7 +74,7 @@ async function connectToWhatsapp(handleMessage) {
 ╔══════════════════╗
       *SOCIETY-MD Bot Connected Successfully* 🚀
 ╠══════════════════╣
-> "Always Forward. Digital Crew, one of the best."
+> "Always Forward. [𒆜𝐁𝐑𝐀𝐃 𝐒𝐎𝐂𝐈𝐄𝐓𝐘𒆜], one of the best."
 ╚══════════════════╝
 
 *Digital Crew 243*
